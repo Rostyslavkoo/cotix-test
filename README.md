@@ -1,6 +1,8 @@
 # VueJs Developer Test
 
 This is a Vue.js 3.x and TypeScript application developed using Vite.js. It fetches real-time track data from the provided JSON file and displays it on the web page. The page is updated every 2 seconds to show the current track being played and the history of past tracks.
+## Design in Figma
+https://www.figma.com/file/cq9BaWnzUJ5PuJSeWsPVFc/cotix-test?type=design&node-id=0%3A1&mode=design&t=8BXCUuG4ZNQUwHLi-1
 
 ***********************************
 :warning: 
