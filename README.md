@@ -10,7 +10,7 @@ I had problems getting data from 'https://onair.radioapi.io/thisisgo/go/onair.js
 https://chrome.google.com/webstore/detail/moesif-origin-cors-change/digfbfaphojjndkpccljibejjbppifbc
 
 
-Also, the api stopped changing the track that is currently playing, because of this it is impossible to make the startTime and progressBar for the track normally, if the api starts to change the track, then everything will work correctly
+Also, the api sometimes stop  changing the track that is currently playing, because of this it is impossible to make the startTime and progressBar for the track normally, if the api starts to change the track, then everything will work correctly
 ****************************
 
 ## Task Requirements
