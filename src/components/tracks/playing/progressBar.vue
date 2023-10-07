@@ -29,21 +29,22 @@ export default defineComponent({
 		getStartTime(): string {
 			const startTime = moment((this as any).playingTrack?.time);
 			const diff = moment.duration(moment().diff(startTime));
-			if (diff.asSeconds() > startTime.seconds()) {
-				return (this as any).playingTrack?.duration;
-			} else {
-				return moment.utc(diff.asMilliseconds()).format('HH:mm:ss');
-			}
+			return moment.utc(diff.asMilliseconds()).format('HH:mm:ss');
 		},
 		getBarCodeWidth(): string {
 			const startTime = moment((this as any).playingTrack?.time);
 			const diff = moment.duration(moment().diff(startTime));
+			return `${(diff.asSeconds() / this.getDurationInSeconds) * 100}%`;
+		},
+		getDurationInSeconds() {
+			if ('duration' in this.playingTrack) {
+				const durationArray = (this as any).playingTrack?.duration.split(':');
 
-			if (diff.asSeconds() !== 0) {
-				const res = (diff.asSeconds() / startTime.seconds()) * 100;
-				return `${res}%`;
+				const minutes = parseInt(durationArray[1], 10);
+				const seconds = parseInt(durationArray[2], 10);
+				return minutes * 60 + seconds;
 			} else {
-				return '0%';
+				return 0;
 			}
 		},
 	},
