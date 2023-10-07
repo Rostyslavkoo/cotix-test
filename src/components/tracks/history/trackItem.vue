@@ -28,6 +28,7 @@ export default defineComponent({
 		},
 	},
 	computed: {
+	// This computed property returns the time elapsed since the track was played, in a human-readable format
 		getTimeAgo(): string {
 			return moment((this as any).track.time).fromNow();
 		},

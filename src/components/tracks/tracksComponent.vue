@@ -20,14 +20,14 @@ export default defineComponent({
 	components: { playingComponent, historyComponent },
 	data() {
 		return {
-			tracks: [],
+			tracks: [], // An array to store the tracks fetched from the server
 			trackUpdateInterval: 0,
 		};
 	},
 	async mounted() {
-		await this.getTracks();
+		await this.getTracks(); // Call the getTracks method when the component is mounted
 		this.trackUpdateInterval = setInterval(() => {
-			this.getTracks();
+			this.getTracks(); // Call the getTracks method every 2 seconds to update the tracks
 		}, 2000);
 	},
 	unmounted() {
@@ -36,17 +36,19 @@ export default defineComponent({
 	methods: {
 		async getTracks() {
 			try {
+				// Fetch the tracks from the server
 				const response = await axios.get(
 					'https://onair.radioapi.io/thisisgo/go/onair.json'
 				);
 
-				this.tracks = response.data.nowplaying;
+				this.tracks = response.data.nowplaying; // Update the tracks array with the fetched data
 			} catch (e) {
 				alert(e);
 			}
 		},
 	},
 	computed: {
+		// This computed property returns an array of tracks that have a status of "history"
 		reversedTracks() {
 			const historyTracks = [
 				...this.tracks.filter(
@@ -55,6 +57,7 @@ export default defineComponent({
 			];
 			return historyTracks;
 		},
+		// This computed property returns the track that has a status of "playing"
 		playingTrack() {
 			const playingTrack = this.tracks.find(
 				(track: { status?: string }) => track.status === 'playing'

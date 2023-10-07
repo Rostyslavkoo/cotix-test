@@ -26,16 +26,19 @@ export default defineComponent({
 		},
 	},
 	computed: {
+		// This computed property returns the start time of the playing track in the format "HH:mm:ss"
 		getStartTime(): string {
 			const startTime = moment((this as any).playingTrack?.time);
 			const diff = moment.duration(moment().diff(startTime));
 			return moment.utc(diff.asMilliseconds()).format('HH:mm:ss');
 		},
+		// This computed property returns the width of the progress bar as a percentage of the total duration of the playing track
 		getBarCodeWidth(): string {
 			const startTime = moment((this as any).playingTrack?.time);
 			const diff = moment.duration(moment().diff(startTime));
 			return `${(diff.asSeconds() / this.getDurationInSeconds) * 100}%`;
 		},
+		// This computed property returns the duration of the playing track in seconds
 		getDurationInSeconds() {
 			if ('duration' in this.playingTrack) {
 				const durationArray = (this as any).playingTrack?.duration.split(':');

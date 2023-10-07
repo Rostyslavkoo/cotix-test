@@ -37,6 +37,7 @@ export default defineComponent({
 		},
 	},
 	methods: {
+	// This method opens the iTunes track URL in a new window when the "View on iTunes" button is clicked.
 		openAlbumURL(iTunesTrackUrl: string) {
 			if(iTunesTrackUrl){
 				window.open(iTunesTrackUrl, '_blank');
