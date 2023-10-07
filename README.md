@@ -2,13 +2,16 @@
 
 This is a Vue.js 3.x and TypeScript application developed using Vite.js. It fetches real-time track data from the provided JSON file and displays it on the web page. The page is updated every 2 seconds to show the current track being played and the history of past tracks.
 
+***********************************
+:warning: 
+**Warning**
 
-:warning: **I had problems getting data from 'https://onair.radioapi.io/thisisgo/go/onair.json' via CORS, so if you also have this problem, you can use the Moesif Origin & CORS Changer custom extension
+I had problems getting data from 'https://onair.radioapi.io/thisisgo/go/onair.json' via CORS, so if you also have this problem, you can use the Moesif Origin & CORS Changer custom extension
 https://chrome.google.com/webstore/detail/moesif-origin-cors-change/digfbfaphojjndkpccljibejjbppifbc
 
 
-Also, the api stopped changing the track that is currently playing, because of this it is impossible to make the startTime and progressBar for the track normally, if the api starts to change the track, then everything will work correctly**
-
+Also, the api stopped changing the track that is currently playing, because of this it is impossible to make the startTime and progressBar for the track normally, if the api starts to change the track, then everything will work correctly
+****************************
 
 ## Task Requirements
 
