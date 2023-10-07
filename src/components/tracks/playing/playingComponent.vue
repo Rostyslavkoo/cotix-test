@@ -38,7 +38,9 @@ export default defineComponent({
 	},
 	methods: {
 		openAlbumURL(iTunesTrackUrl: string) {
-			window.open(iTunesTrackUrl, '_blank');
+			if(iTunesTrackUrl){
+				window.open(iTunesTrackUrl, '_blank');
+			}
 		},
 	},
 });
