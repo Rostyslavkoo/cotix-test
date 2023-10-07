@@ -11,7 +11,8 @@ https://chrome.google.com/webstore/detail/moesif-origin-cors-change/digfbfaphojj
 
 
 Also, the api sometimes stop  changing the track that is currently playing, because of this it is impossible to make the startTime and progressBar for the track normally, if the api starts to change the track, then everything will work correctly
-****************************
+***********************************
+
 
 ## Task Requirements
 
@@ -20,7 +21,7 @@ Also, the api sometimes stop  changing the track that is currently playing, beca
 3. Display the following details for each track item:
    - Title
    - Artist
-   - Album
+   - Album (:interrobang: not found in api response)
    - ImageUrl (as an image)
    - Duration
    - StartTime (in the local time of the browser)
