@@ -30,7 +30,7 @@ Also, the api sometimes stop  changing the track that is currently playing, beca
 
 ## How to Run the Application
 
-1. Make sure you have Node.js and npm installed on your system.
+1. Make sure you have Node.js and npm installed on your system. `(Node v16.3.0)`
 2. Clone this repository to your local machine.
 3. Navigate to the project directory using the terminal/command prompt.
 4. Install the project dependencies using the following command:
@@ -45,7 +45,7 @@ npm install
 npm run dev
 ```
 
-6. Open your browser and visit `http://localhost:3000` to view the application.
+6. Open your browser and visit `http://localhost:5173` to view the application.
 
 ## Project Structure
 
